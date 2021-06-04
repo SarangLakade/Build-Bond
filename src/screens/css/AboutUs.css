@@ -1,0 +1,112 @@
+body {
+  font-family: "Poppins", "Jost";
+  /* Arial, Helvetica, sans-serif; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+.form-control-cont {
+  width: 100%;
+  padding: 15px;
+  /* border: 1px solid #ccc; */
+  margin-top: 1px;
+  margin-bottom: 1px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  margin-left: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  text-decoration: underline;
+  color: #45a049;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #45a049;
+  font-size: 18pt;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.icons-about {
+  color: #4caf50;
+}
+
+/* Style the container/contact section */
+.container-cont-abou {
+  background-color: white;
+}
+.img-cont-abou {
+  max-width: 100%;
+  height: auto;
+}
+
+ul li:before {
+  color: #4caf50;
+  font-weight: bold;
+}
+/* Create two columns that float next to eachother */
+.column-cont-abou {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 8px;
+  display: block;
+}
+
+.card-expertise {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.container-cont-abou::after,
+.row-cont-abou:after {
+  content: "";
+  display: table;
+  clear: both;
+  width: 50%;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-cont-abou,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
