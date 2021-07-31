@@ -1,4 +1,4 @@
-import React, { Profiler } from "react";
+import React from "react";
 import Header from "./components/Header";
 import UserInfo from "./components/UserInfo";
 import Prescription from "./components/Prescription";

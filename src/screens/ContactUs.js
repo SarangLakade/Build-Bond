@@ -4,7 +4,6 @@ import { TextField, Typography } from "@material-ui/core";
 import NavigationBar from "./../component/NavgationBar";
 import Header from "./components/Header";
 import CustomFooter from "../component/Footer";
-import formValidation from "../Helper/formValidation";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
@@ -144,16 +143,15 @@ export default function Contact() {
             alt="map"
             className="img-cont-abou"
           ></img> */}
-
-          <iframe
-            className="responsive-map"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60538.339326375986!2d73.833676!3d18.499678!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31a7749831cbb41e!2sThe%20Senate%20Business%20Centre%20%26%20Co-working%20Spaces%20-%20Erandwane!5e0!3m2!1sen!2sus!4v1622566092010!5m2!1sen!2sus"
-            title="map"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
         </div>
       </div>
+      <iframe
+        className="responsive-map"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60538.339326375986!2d73.833676!3d18.499678!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31a7749831cbb41e!2sThe%20Senate%20Business%20Centre%20%26%20Co-working%20Spaces%20-%20Erandwane!5e0!3m2!1sen!2sus!4v1622566092010!5m2!1sen!2sus"
+        title="map"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
       <CustomFooter />
     </div>
   );

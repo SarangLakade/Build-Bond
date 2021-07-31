@@ -1,22 +1,16 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import Paper from "@material-ui/core/Paper";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
-import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import PersonalInfo from "../component/PersonalInfo";
 import PaymentForm from "./../component/PaymentForm";
 import HealthHistory from "./../component/HealthHistory";
 import SlotBook from "../component/SlotBook";
-import { useSelector } from "react-redux";
 import formValidation from "../Helper/formValidation";
-import CustomFooter from "./../component/Footer";
 import NavigationBar from "./../component/NavgationBar";
 
 function Copyright() {
@@ -134,28 +128,6 @@ const fieldsValidation = {
   },
 };
 
-// const steps = [
-//   "Shipping address",
-//   "Health History",
-//   "Slot Booking",
-//   "Payment details",
-// ];
-
-// function getStepContent(step) {
-//   switch (step) {
-//     case 0:
-//       return <PersonalInfo />;
-//     case 1:
-//       return <HealthHistory />;
-//     case 2:
-//       return <SlotBook />;
-//     case 3:
-//       return <PaymentForm />;
-//     default:
-//       throw new Error("Unknown step");
-//   }
-// }
-
 const Success = () => {
   return (
     <React.Fragment>
@@ -270,59 +242,6 @@ export default function Checkout() {
                 ))}
               </Stepper>
               {handleSteps(activeStep)}
-
-              {/* <Stepper
-            activeStep={activeStep}
-            className={classes.stepper}
-            alternativeLabel
-          >
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-          <React.Fragment>
-            {activeStep === steps.length ? (
-              <React.Fragment>
-                <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
-                </Typography>
-                <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order
-                  confirmation, and will send you an update when your order has
-                  shipped.
-                </Typography>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                {getStepContent(activeStep)}
-                <div className={classes.buttons}>
-                  {activeStep !== 0 && (
-                    <Button
-                      variant="contained"
-                      color="secondary"
-                      onClick={handleBack}
-                      style={{ color: "#51B700" }}
-                      className={classes.button}
-                    >
-                      Back
-                    </Button>
-                  )}
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1
-                      ? "Book Appoinment"
-                      : "Next"}
-                  </Button>
-                </div>
-              </React.Fragment>
-            )}
-          </React.Fragment> */}
             </Paper>
             <Copyright />
           </main>

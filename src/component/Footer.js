@@ -9,6 +9,7 @@ import {
   TextField,
   Avatar,
   Fab,
+  Link,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Mail, Call, LocationOn } from "@material-ui/icons";
@@ -249,49 +250,53 @@ export default function CustomFooter() {
                 variant="body2"
                 style={{ marginTop: 3, marginBottom: 3 }}
               >
-                <a
+                <Link
                   onClick={() => {
                     history.push("/appoinment");
                   }}
+                  color="inherit"
                 >
                   Get Appoinment
-                </a>
+                </Link>
               </Typography>
               <Typography
                 variant="body2"
                 style={{ marginTop: 3, marginBottom: 3 }}
               >
-                <a
+                <Link
+                  color="inherit"
                   onClick={() => {
                     history.push("/service");
                   }}
                 >
                   Services
-                </a>
+                </Link>
               </Typography>
               <Typography
                 variant="body2"
                 style={{ marginTop: 3, marginBottom: 3 }}
               >
-                <a
+                <Link
+                  color="inherit"
                   onClick={() => {
                     history.push("/blog");
                   }}
                 >
                   Blogs
-                </a>
+                </Link>
               </Typography>
               <Typography
                 variant="body2"
                 style={{ marginTop: 3, marginBottom: 3 }}
               >
-                <a
+                <Link
+                  color="inherit"
                   onClick={() => {
                     history.push("/contactus");
                   }}
                 >
                   Contact us
-                </a>
+                </Link>
               </Typography>
             </Box>
           </Grid>

@@ -1,21 +1,15 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import BlogCard from './BlogCard.js';
-import Grid from '@material-ui/core/Grid';
-import blogImg2 from '../images/blog2.jpg';
-import blogImg3 from '../images/blog3.jpg';
-import blogImg4 from '../images/blog4.jpg';
-import Box from '@material-ui/core/Box';
-import BlogData from './BlogData';
-import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
-
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import BlogCard from "./BlogCard.js";
+import Grid from "@material-ui/core/Grid";
+import blogImg2 from "../images/blog2.jpg";
+import blogImg3 from "../images/blog3.jpg";
+import blogImg4 from "../images/blog4.jpg";
+import BlogData from "./BlogData";
 
 const useStyles = makeStyles((theme) => ({
-
-
   allBlog: {
-
-    [theme.breakpoints.up('xs')]: {
+    [theme.breakpoints.up("xs")]: {
       width: "100px",
       borderBottom: "5px solid rgba(81, 183, 0, 0.81)",
       fontFamily: "jost",
@@ -23,44 +17,32 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       margin: "auto",
       fontSize: "25px",
-      paddingBottom: "10px"
+      paddingBottom: "10px",
     },
 
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: "160px",
       borderBottom: "5px solid rgba(81, 183, 0, 0.81)",
       fontFamily: "jost",
       fontWeight: "bold",
       margin: "auto",
       fontSize: "40px",
-      paddingBottom: "10px"
+      paddingBottom: "10px",
     },
 
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       width: "160px",
       borderBottom: "5px solid rgba(81, 183, 0, 0.81)",
       fontFamily: "jost",
       fontWeight: "bold",
       marginLeft: "210px",
       fontSize: "40px",
-      paddingBottom: "10px"
+      paddingBottom: "10px",
     },
-
   },
-
-
-}))
-
-
-
-
-
-
-
-
+}));
 
 export default function BlogArea() {
-
   const classes = useStyles();
 
   return (
@@ -69,11 +51,8 @@ export default function BlogArea() {
         <div style={{ marginBottom: "50px" }}>
           <h2 className={classes.allBlog}>All Blogs</h2>
         </div>
-        <Grid container justify="center" >
-
-          <Grid item lg={12}>
-
-          </Grid>
+        <Grid container justify="center">
+          <Grid item lg={12}></Grid>
           <Grid item xs={10} sm={10} md={5} lg={3}>
             <BlogCard
               image={blogImg2}
@@ -100,7 +79,6 @@ export default function BlogArea() {
               link={BlogData[3].link}
             ></BlogCard>
           </Grid>
-
         </Grid>
       </div>
     </>

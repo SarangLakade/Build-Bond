@@ -4,7 +4,7 @@ import { Typography, Grid, Button } from "@material-ui/core";
 import DatePicker from "react-datepicker";
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
-import { addDays, set, lightFormat } from "date-fns";
+import { addDays, lightFormat } from "date-fns";
 import "react-datepicker/dist/react-datepicker.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,18 +21,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SlotBook({
   handleNext,
-  handleChange,
   handleBack,
-  values: {
-    firstName,
-    lastName,
-    email,
-    gender,
-    appointmentDate,
-    appointmentTime,
-    bloodGroup,
-    height,
-  },
+  values: { firstName, lastName, email, gender },
   formErrors,
 }) {
   const classes = useStyles();

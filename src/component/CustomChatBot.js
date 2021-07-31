@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
-import emailjs from "emailjs-com";
-import { json } from "body-parser";
+// import emailjs from "emailjs-com";
+// import { json } from "body-parser";
 
 const config = {
   width: "400px",
@@ -118,15 +118,15 @@ export default function CustomChatBot() {
               id: "email",
               user: true,
 
-              validator: (value) => {
-                if (
-                  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)
-                ) {
-                  return console.log(value);
-                } else {
-                  return "Please enter a valid email.";
-                }
-              },
+              // validator: (value) => {
+              //   if (
+              //     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)
+              //   ) {
+              //     return console.log(value);
+              //   } else {
+              //     return "Please enter a valid email.";
+              //   }
+              // },
               trigger: "c-phone",
             },
             {
@@ -142,7 +142,7 @@ export default function CustomChatBot() {
             {
               id: "response",
               message: "Thanks For Response",
-              component: <Review />,
+              // component: <Review />,
             },
           ]}
           {...config}

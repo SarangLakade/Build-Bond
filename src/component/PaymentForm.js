@@ -104,7 +104,7 @@ export default function PaymentForm({
           target="_bank"
           rel="nooper noreferrer"
         >
-          Pay 55
+          Pay here
         </a>
       </Grid>
       <div
@@ -118,7 +118,7 @@ export default function PaymentForm({
           variant="contained"
           disabled={!isValid}
           color="primary"
-          onClick={!isValid ? handleSubmit : null}
+          onClick={!isValid ? null : handleSubmit}
         >
           Confirm & Continue
         </Button>

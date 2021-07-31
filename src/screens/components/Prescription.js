@@ -1,17 +1,8 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-
 import Typography from "@material-ui/core/Typography";
-import {
-  createMuiTheme,
-  responsiveFontSizes,
-  ThemeProvider,
-} from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import { shadows } from "@material-ui/system";
-import Header from "./Header";
 import jsPDF from "jspdf";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -100,7 +91,7 @@ export default function Prescription() {
               aria-label="simple tabs example"
             >
               <Tab label="Prescription" {...a11yProps(0)} />
-              <Tab label="Subscription" {...a11yProps(1)} />
+              {/* <Tab label="Subscription" {...a11yProps(1)} /> */}
             </Tabs>
           </AppBar>
           <TabPanel value={value} index={0}>

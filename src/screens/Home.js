@@ -1,15 +1,6 @@
 import React from "react";
-import {
-  Container,
-  Grid,
-  Typography,
-  Button,
-  Paper,
-  Box,
-  Fab,
-} from "@material-ui/core";
+import { Container, Grid, Typography, Button, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import CircularCard from "../component/CircularCard";
 import { RadioButtonChecked, Chat } from "@material-ui/icons";
 import HexagonalCard from "../component/HexagonalCard";
 import Carousel from "react-bootstrap/Carousel";

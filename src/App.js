@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./screens/Home";
 import AboutUs from "./screens/AboutUs";
@@ -87,14 +87,13 @@ const theme = createMuiTheme({
 
 function App() {
   const dispatch = useDispatch();
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-  console.log(user);
+  const user = JSON.parse(localStorage.getItem("profile"));
+  // console.log(user);
   useEffect(() => {
     dispatch(getPosts);
   }, [dispatch]);
 
   function PrivateRoute({ children, ...rest }) {
-    // let auth = useAuth();
     return (
       <Route
         {...rest}

@@ -10,6 +10,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import "./css/Service.css";
+import NavigationBar from "./../component/NavgationBar";
+import Header from "./components/Header";
+import CustomFooter from "../component/Footer";
 
 const useStyles = makeStyles((theme) => ({
   app: {
@@ -51,6 +54,8 @@ function Service() {
 
   return (
     <div className="App">
+      <NavigationBar />
+      <Header title="Services" />
       <Container maxWidth="lg" className={classes.blogsContainer}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
@@ -276,6 +281,7 @@ function Service() {
           </Grid>
         </Grid>
       </Container>
+      <CustomFooter />
     </div>
   );
 }

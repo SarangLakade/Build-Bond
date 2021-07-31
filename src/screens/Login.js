@@ -1,12 +1,7 @@
 import React from "react";
 import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Link from "@material-ui/core/Link";
-import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
@@ -57,12 +52,12 @@ export default function Login() {
   const responseGoogleSuccess = (response) => {
     const result = response?.profileObj;
     const token = response?.tokenId;
-    console.log(response);
+    console.log(result.email);
     // console.log(token);
     try {
       dispatch({ type: "AUTH", data: { result, token } });
       history.push("/");
-      // window.location.reload(false);
+      window.location.reload(false);
     } catch (error) {
       console.log(error);
     }
