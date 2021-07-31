@@ -115,7 +115,7 @@ export default function Login() {
             </Link>
           </Button> */}
         <GoogleLogin
-          clientId="610964004414-bmik2ojfuorgsr40oalrudj6n3ed3jni.apps.googleusercontent.com"
+          clientId="google client id"
           buttonText="Login with Google"
           accessType="offline"
           approvalPrompt="force"
